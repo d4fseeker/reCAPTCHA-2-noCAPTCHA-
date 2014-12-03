@@ -9,7 +9,7 @@ You can find a basic example below :)
 </p>
 <h2>Basic Example</h2>
 PHP:
-<code>
+```
 	<?php
 	
 	//Require the recaptcha class
@@ -32,11 +32,11 @@ PHP:
 	
 	?>
 
-</code>
+```
 
 HTML:
 
-<code>
+```
 <!DOCTYPE html>
 <html>
 <head>
@@ -54,4 +54,4 @@ HTML:
 	  
 	</form>
 </body>
-</code>
+```

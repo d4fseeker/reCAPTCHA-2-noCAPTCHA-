@@ -5,8 +5,8 @@ require_once 'recaptcha.php';
 
 //Define the keys for the api, you can get them from https://www.google.com/recaptcha/
 $keys = array(
-	'site_key' => '6LeWrv4SAAAAAEWu8fPPtss4QFwNcRdA3KUw1B-6',
-	'secret_key' => '6LeWrv4SAAAAAM_RBF8srBBpdIrF-0lHY4VlIt7i'
+	'site_key' => 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+	'secret_key' => 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 );
 
 //Instantiate the Recaptcha class as $recaptcha
