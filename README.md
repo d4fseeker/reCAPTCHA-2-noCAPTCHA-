@@ -25,7 +25,7 @@ PHP:
 	$recaptcha = new Recaptcha($keys);
 	
 	//If the form is submitted, then check if the response was correct
-	if(isset($_POST['g-recaptcha-response'])) {
+	if($recaptcha->isSet()) {
 		var_dump($recaptcha->verify($_POST['g-recaptcha-response']));
 	}
 	

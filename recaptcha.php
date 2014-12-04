@@ -8,6 +8,14 @@ class Recaptcha {
 		$this->secret_key = $keys['secret_key'];
 	}
 	
+	public function isSet() {
+		if(isset($_POST['g-recaptcha-response'])) {
+			return True;
+		}
+		
+		return False;
+	}
+	
 	
 	public function render() {
 	
