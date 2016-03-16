@@ -9,10 +9,7 @@ class Recaptcha {
 	}
 	
   	public function set() {
-  		if(isset($_POST['g-recaptcha-response'])) {
-			return True;
-		}
-		return False;
+  		return isset($_REQUEST['g-recaptcha-response']);
   	}
 	
 	
