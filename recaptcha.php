@@ -21,7 +21,11 @@ class Recaptcha {
 		return $html;
 	}
 	
-	public function verify($response) {
+	public function verify($response=null) {
+		//Fetch response if not provided
+		if(is_null($response)) {
+			$response = $_REQUEST['g-recaptcha-response'];
+		}
 		
 		//Get user ip
 		$ip = $_SERVER['REMOTE_ADDR'];
@@ -34,11 +38,7 @@ class Recaptcha {
 		$data = json_decode(file_get_contents($full_url));
 		
 		//Return true or false, based on users input
-		if(isset($data->success) && $data->success == true) {
-			return True;
-		}
-		
-		return False;
+		return ( isset($data->success) && $data->success == true );
 	}
 	
 }
