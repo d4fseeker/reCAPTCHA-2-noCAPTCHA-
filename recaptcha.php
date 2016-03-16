@@ -1,11 +1,22 @@
 <?php 
 
 class Recaptcha {
+	
+	protected $site_key;
+	protected $secret_key;
 
 
-	public function __construct($keys = array()) {
-		$this->site_key = $keys['site_key'];
-		$this->secret_key = $keys['secret_key'];
+	public function __construct($keys_or_public,$private_or_null=null) {
+		//Legacy support
+		if(is_array($keys_or_public)) {
+			$this->site_key = $keys_or_public['site_key'];
+			$this->secret_key = $keys_or_public['secret_key'];	
+		}
+		else {
+			$this->site_key = $keys_or_public;
+			$this->secret_key = $private_or_null;
+		}
+		
 	}
 	
   	public function set() {
