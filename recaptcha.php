@@ -9,22 +9,17 @@ class Recaptcha {
 	}
 	
   	public function set() {
-    	
-      if(isset($_POST['g-recaptcha-response'])) {
+  		if(isset($_POST['g-recaptcha-response'])) {
 			return True;
 		}
-		
 		return False;
-    	
   	}
 	
 	
 	public function render() {
-	
 		//Create the html code
 		$html = '<script src="https://www.google.com/recaptcha/api.js" async defer></script>';
 		$html .= '<div class="g-recaptcha" data-sitekey="'.$this->site_key.'"></div>';
-		    
 		//return the html    
 		return $html;
 	}
@@ -49,11 +44,4 @@ class Recaptcha {
 		return False;
 	}
 	
-	
-
-
 }
-
-
-
- ?>
